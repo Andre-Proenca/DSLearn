@@ -21,19 +21,19 @@ public class Enrollment {
 	private Instant enrollMoment;
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Instant refoundMoment;	
+	private Instant refundMoment;	
 	private boolean available;
 	private boolean onlyUpdate;
 	
 	public Enrollment() {
 	}
 
-	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refoundMoment, boolean available,
+	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refundMoment, boolean available,
 			boolean onlyUpdate) {
 		id.setUser(user);
 		id.setOffer(offer);
 		this.enrollMoment = enrollMoment;
-		this.refoundMoment = refoundMoment;
+		this.refundMoment = refundMoment;
 		this.available = available;
 		this.onlyUpdate = onlyUpdate;
 	}
@@ -63,11 +63,11 @@ public class Enrollment {
 	}
 
 	public Instant getRefoundMoment() {
-		return refoundMoment;
+		return refundMoment;
 	}
 
 	public void setRefoundMoment(Instant refoundMoment) {
-		this.refoundMoment = refoundMoment;
+		this.refundMoment = refoundMoment;
 	}
 
 	public boolean isAvailable() {
