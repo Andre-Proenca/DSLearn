@@ -1,7 +1,9 @@
 package com.devsuperior.dslearn.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -15,9 +17,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-//asbtract class - nao pode ser instanciada
+//asbtract class - não pode ser instanciada!
 @Entity
 @Table(name = "tb_lesson")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -33,6 +36,9 @@ public abstract class Lesson implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "section_id")
 	private Section section;
+	
+	@OneToMany(mappedBy = "lesson")
+	private List<Deliver> deliveries = new ArrayList<>();
 	
 	@ManyToMany
 	@JoinTable(name = "tb_lessons_done",
@@ -87,6 +93,10 @@ public abstract class Lesson implements Serializable {
 
 	public Set<Enrollment> getEnrollmentsDone() {
 		return enrollmentsDone;
+	}	
+
+	public List<Deliver> getDeliveries() {
+		return deliveries;
 	}
 
 	@Override
