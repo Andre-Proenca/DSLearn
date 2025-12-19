@@ -86,10 +86,6 @@ public class User implements Serializable {
 		return roles;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
-
 	public List<Notification> getNotifications() {
 		return notifications;
 	}
@@ -109,8 +105,5 @@ public class User implements Serializable {
 			return false;
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
-	}
-
-	
-	
+	}	
 }

@@ -94,6 +94,10 @@ public class Enrollment {
 	public boolean isOnlyUpdate() {
 		return onlyUpdate;
 	}
+	
+	public void setOnlyUpdate(boolean onlyUpdate) {
+		this.onlyUpdate = onlyUpdate;
+	}
 
 	public Set<Lesson> getLessonsDone() {
 		return lessonsDone;
@@ -101,11 +105,7 @@ public class Enrollment {
 
 	public List<Deliver> getDeliveries() {
 		return deliveries;
-	}
-
-	public void setOnlyUpdate(boolean onlyUpdate) {
-		this.onlyUpdate = onlyUpdate;
-	}
+	}	
 
 	@Override
 	public int hashCode() {

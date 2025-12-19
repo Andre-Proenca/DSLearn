@@ -1,76 +1,151 @@
-# 📚 DSLearn
+# 🎓 DSLearn — Plataforma de Ensino Online
 
-> 🚧 **Projeto em fase de construção** 🚧
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![Status](https://img.shields.io/badge/Status-Finalizado-success)
 
-O **DSLearn** é um projeto educacional em desenvolvimento, criado com o objetivo de consolidar e demonstrar conhecimentos em **desenvolvimento back-end**, seguindo boas práticas de arquitetura, testes e organização de código.
+> Projeto **finalizado** com foco em back-end, desenvolvido para simular uma plataforma de ensino real, aplicando conceitos de **arquitetura**, **modelagem de domínio**, **regras de negócio** e **boas práticas de desenvolvimento**.
 
----
-
-## 🧠 Sobre o Projeto
-
-O DSLearn é uma **plataforma de ensino online** que permite o gerenciamento de:
-
-* 📘 **Cursos**
-* 👥 **Turmas**
-* 🎓 **Alunos**
-* 💬 **Fórum de perguntas e respostas** sobre os conteúdos dos cursos
-
-A aplicação foi pensada para simular um cenário real de mercado, com diferentes tipos de usuários e regras de acesso bem definidas.
+🔗 Repositório: [https://github.com/Andre-Proenca/DSLearn](https://github.com/Andre-Proenca/DSLearn)
 
 ---
 
-## 👤 Perfis de Usuário
+## 📌 Visão Geral
 
-O sistema possui três tipos principais de usuários:
+O **DSLearn** é uma plataforma de ensino online responsável por gerenciar **cursos**, **turmas**, **alunos** e um **fórum de perguntas e respostas** integrado ao conteúdo dos cursos.
 
-* **Aluno**: pode acessar conteúdos dos cursos e participar do fórum
-* **Professor**: pode acompanhar turmas e interagir no fórum
-* **Administrador**: responsável pelo cadastro de cursos e turmas
-
-> 🔐 Apenas usuários administradores possuem permissão para realizar cadastros estruturais no sistema.
+O sistema foi projetado para refletir cenários reais do mercado, com múltiplos perfis de usuários, controle de acesso e fluxos completos de aprendizado.
 
 ---
 
-## 🚧 Status do Projeto
+## 👥 Perfis de Usuário
 
-Este projeto encontra-se **em fase de construção**, o que significa que:
+* **Aluno**
 
-* Algumas funcionalidades ainda estão sendo implementadas
-* Novas features podem ser adicionadas
-* Estrutura e regras de negócio podem sofrer ajustes
+  * Acessa conteúdos e aulas
+  * Envia tarefas
+  * Participa do fórum
 
-O desenvolvimento está sendo feito de forma incremental, priorizando **qualidade de código**, **testes automatizados** e **boas práticas**.
+* **Professor**
+
+  * Avalia tarefas dos alunos
+  * Interage no fórum
+  * Marca respostas como corretas
+
+* **Administrador**
+
+  * Cadastra cursos
+  * Cria turmas (ofertas)
+
+> 🔐 Apenas administradores possuem permissão para cadastrar cursos e turmas.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas (em evolução)
+## 📚 Estrutura Acadêmica
 
-* Java
-* Spring Boot
-* JPA / Hibernate
-* Banco de Dados Relacional
-* Testes com JUnit
+### Cursos e Recursos
+
+Um **curso** é composto por vários **recursos**, que representam grupos de conteúdo, como:
+
+* Trilhas de aprendizado
+* Conteúdos bônus
+* Links externos
+* Fórum de perguntas e respostas
+
+Cada recurso pode conter **seções**, e cada seção contém **aulas**, que podem ser:
+
+* 🎥 Vídeo
+* 📝 Texto
+* 🧩 Tarefas avaliativas
+
+---
+
+## 🧩 Tarefas e Avaliações
+
+As tarefas possuem regras bem definidas:
+
+* Peso
+* Data de entrega
+* Número de questões
+* Quantidade mínima de acertos
+
+📤 Quando um aluno envia uma tarefa:
+
+* Ela fica **aguardando feedback do professor**
+* Pode ser **aceita** ou **rejeitada**
+
+---
+
+## 🗓️ Turmas (Ofertas)
+
+Cada turma representa uma **oferta** do curso, contendo:
+
+* Data de início
+* Data de fim
+
+Diferentes ofertas de um mesmo curso podem ter **pequenas variações de conteúdo**, permitindo customização para cada turma.
+
+---
+
+## 🔔 Notificações
+
+O sistema envia **notificações** para alunos e professores, garantindo maior engajamento e acompanhamento das atividades.
+
+---
+
+## 💬 Fórum de Perguntas e Respostas
+
+O fórum é integrado aos cursos e possui as seguintes funcionalidades:
+
+### 📋 Listagem de Tópicos com Filtros
+
+* Por recurso / seção / aula
+* Por texto (título e/ou corpo)
+* Apenas tópicos do usuário logado
+
+### ✍️ Interações
+
+* Criar tópico (título e corpo)
+* Responder tópico
+* Marcar / desmarcar **upvote** em perguntas (exceto o autor)
+* Marcar / desmarcar **upvote** em respostas (exceto o autor)
+* Marcar / desmarcar **melhor resposta**
+
+  * Permitido apenas para o autor do tópico e instrutor
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Java 21**
+* **Spring Boot**
+* Spring Data JPA / Hibernate
+* Banco de dados relacional
 * Maven
-
-> ⚙️ A stack pode evoluir conforme o avanço do projeto.
-
----
-
-## 🎯 Objetivo
-
-Este projeto faz parte do meu processo de aprendizado e evolução como desenvolvedor, servindo também como **projeto de portfólio** para demonstrar:
-
-* Organização de um projeto back-end
-* Modelagem de domínio
-* Controle de acesso por perfil
-* Implementação de regras de negócio
+* JUnit (testes)
+* H2 / PostgreSQL (dependendo do ambiente)
 
 ---
 
-## 📌 Observações Finais
+## 🎯 Objetivo do Projeto
 
-Sinta-se à vontade para acompanhar a evolução do projeto. Sugestões e feedbacks são sempre bem-vindos! 😊
+Este projeto foi desenvolvido com o objetivo de:
+
+* Consolidar conhecimentos em **desenvolvimento back-end**
+* Aplicar **boas práticas de arquitetura**
+* Trabalhar com **regras de negócio complexas**
+* Servir como **projeto de portfólio** para processos seletivos
 
 ---
 
-✨ *Projeto em constante evolução — melhorias contínuas em andamento.*
+## 👨‍💻 Autor
+
+**André Proença**
+Desenvolvedor Back-end Júnior
+
+🔗 GitHub: [https://github.com/Andre-Proenca](https://github.com/Andre-Proenca)
+🔗 LinkedIn: [https://www.linkedin.com/in/andreleivaproenca/](https://www.linkedin.com/in/andreleivaproenca/)
+
+---
+
+✨ Projeto concluído e pronto para demonstrar habilidades técnicas em ambientes reais de desenvolvimento.
